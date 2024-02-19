@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Esercizio 1</title>
+</head>
+<body class="bg-[#264f36] min-h-screen flex flex-col">
+    <header class="text-center pt-6">
+        <div class="flex flex-col justify-center items-center">
+            <img class="w-[100px] h-[100px]" src="assets/mcdonald's-logo.jpeg" alt="Logo McDonald">
+            <h1 class="text-[30px] text-white mt-4">Crea il tuo panino</h1>
+            <div id="welcomeMessage" class="text-white text-[22px] mt-4"></div> <!-- Messaggio di benvenuto -->
+        </div>
+        <div class="flex flex-wrap justify-center m-4">
+            <div class="flex flex-col text-[22px] mr-10">
+                <!-- Gruppo 1 di ingredienti -->
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="lattuga" name="lattuga" value="0.50" class="mr-2">
+                    Lattuga
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="ketchup" name="ketchup" value="0.70" class="mr-2">
+                    Ketchup
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="pomodori" name="pomodori" value="0.34" class="mr-2">
+                    Pomodori
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="bacon" name="bacon" value="0.56" class="mr-2">
+                    Bacon
+                </label>
+            </div>
+            <div class="flex flex-col text-[22px]">
+                <!-- Gruppo 2 di ingredienti -->
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="hamburger" name="hamburger" value="0.75" class="mr-2">
+                    Hamburger
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="maionese" name="maionese" value="0.33" class="mr-2">
+                    Maionese
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="mozzarella" name="mozzarella" value="0.42" class="mr-2">
+                    Mozzarella
+                </label>
+                <label class="flex items-center mb-2">
+                    <input type="checkbox" id="cetriolini" name="cetriolini" value="0.10" class="mr-2">
+                    Cetriolini
+                </label>
+            </div>
+        </div>
+        
+    </header>
+   
+    <main class="flex-grow">
+        <div class="flex flex-col items-center justify-center h-full">
+            <section class="mt-10 px-4 text-center">
+                <h2 class="text-white text-[22px]">Inserisci il tuo codice sconto:</h2>
+                <input class="mt-2 w-[200px] p-2" type="text" id="discountCode" placeholder="Codice sconto">
+                <button class="ml-4 border-2 border-black bg-black text-white py-2 px-4" id="applyDiscount">Applica Sconto</button>
+                <div id="discountMessage" class="text-white mt-2"></div>
+            </section>
+            
+            <section class="mt-4">
+                <button class="border-2 border-black bg-black text-white py-2 px-4" id="calculatePrice">Calcola il prezzo</button>
+                <div id="totalPrice" class="text-white ml-4 inline"></div> <!-- Prezzo totale originale -->
+                <div id="discountedPrice" class="text-white ml-4 inline"></div> <!-- Prezzo dopo lo sconto -->
+
+                <div id="totalPrice" class="text-white ml-4"></div>
+
+                
+
+            </section>
+        </div>
+    </main>
+</body>
+</html>
